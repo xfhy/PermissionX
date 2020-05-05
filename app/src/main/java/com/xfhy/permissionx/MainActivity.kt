@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun call(view: View) {
-        PermissionX.request(this, Manifest.permission.CALL_PHONE) { allGranted, deniedList ->
+        PermissionX.request(this, Manifest.permission.CALL_PHONE, Manifest.permission.READ_CONTACTS) { allGranted, deniedList ->
             if (allGranted) {
                 callPhone()
             } else {
